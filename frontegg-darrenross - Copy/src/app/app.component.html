@@ -1,0 +1,19 @@
+
+@if(!isLoading){
+  <div>
+    @if(user){
+    <div>
+      <img src={{user?.profilePictureUrl}} alt={{user?.name}} />
+      <div>User name: {{user?.name}}</div>
+      <button (click)="logOut()">Log out</button>
+    </div>
+    } @else {
+    <div>
+      <!-- Uncomment when not using auto-redirect-->
+      <button (click)="loginWithRedirect()">Login with redirect</button>
+    </div>
+    }
+  </div>
+  }
+
+<router-outlet />
