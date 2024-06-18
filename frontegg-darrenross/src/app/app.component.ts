@@ -15,7 +15,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit, OnDestroy {
   isLoading = true;
   loadingSubscription: Subscription;
-  user?: any;
+  user: any;
   title = 'frontegg-darrenross';
 
   constructor(private fronteggAuthService: FronteggAuthService, private fronteggAppService: FronteggAppService) {
@@ -40,7 +40,7 @@ export class AppComponent implements OnInit, OnDestroy {
   // }
 
   loginWithRedirect(): void {
-    this.fronteggAuthService.loginWithRedirect();
+    this.fronteggAuthService.loginWithRedirect({ prompt: 'login' });
   }
   
   logOut(): void {
@@ -54,5 +54,9 @@ export class AppComponent implements OnInit, OnDestroy {
 
   showApp(): void {
     this.fronteggAppService?.showAdminPortal()
+  }
+
+  openHostedAdminPortal(): void {
+    this.fronteggAppService.openHostedAdminPortal()
   }
 }

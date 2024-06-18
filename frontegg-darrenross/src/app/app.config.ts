@@ -6,7 +6,7 @@ import { routes } from './app.routes';
 
 const fronteggConfig: FronteggAppOptions = {
   contextOptions: {
-    baseUrl: 'https://app-zpoy8smh4o3c.frontegg.com/oauth',
+    baseUrl: 'https://app-zpoy8smh4o3c.frontegg.com',
     clientId: '149c2e87-a126-44b6-8b46-f047bc0f596b',
   },
   authOptions: {

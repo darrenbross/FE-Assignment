@@ -5,6 +5,7 @@
     <div>
       <img src={{user?.profilePictureUrl}} alt={{user?.name}} />
       <div>User name: {{user?.name}}</div>
+      <button (click)="openHostedAdminPortal()">Admin Portal</button>
       <button (click)="logOut()">Log out</button>
     </div>
     } @else {
